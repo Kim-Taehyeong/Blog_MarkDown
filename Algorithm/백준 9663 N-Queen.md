@@ -28,38 +28,49 @@ N-Queen 문제는 백트래킹에서 매우 유명한 문제이기 때문에 한
 #include <iostream>
 #include <vector>
 
-std::vector<int> v;
-int N, ret;
+std::vector<int> v; // Queen의 위치 배열
+int N, ret; // Input, Print 변수
 
+// Queen을 현재 위치에 둘 수 있는지 체크
 bool chk(int depth) {
+	// 전체 N (세로줄) 순회
 	for (int i = 0; i < depth; i++) {
+		// 같은 줄 (세로줄)에 있다면 불가능
 		if (v[depth] == v[i])
 			return false;
+		// 대각선에 있다면 불가능 (|y| = |x|)
 		if (std::abs(depth - i) == std::abs(v[depth] - v[i]))
 			return false;
 	}
 	return true;
 }
 
+// Backtracking
 void solve(int depth) {
+	// 기저 사례 : N 개의 Queen을 선택한다면
 	if (depth == N) {
-		ret += 1;
+		ret += 1; // 정답 + 1
 		return ;
 	}
+	// 0 ~ N (가로줄)에 Queen을 시도
 	for (int i = 0; i < N; i++) {
-		v[depth] = i;
+		v[depth] = i; // Queen 두기
+		// 현재 위치가 가능하다면
 		if (chk(depth))
-			solve(depth + 1);
-		v[depth] = -1;
+			solve(depth + 1); // 재귀 호출
+		v[depth] = -1; // Queen 삭제
 	}
 }
 
 int main(void) {
+	// Input
 	std::cin >> N;
 	for (int i = 0; i < N; i++) {
 		v.push_back(-1);
 	}
+	// Solve
 	solve(0);
+	// Print
 	std::cout << ret << std::endl;
 }
 ```
