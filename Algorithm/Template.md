@@ -9,7 +9,7 @@
 
 
 문제 구분 : 
-##### [문제 - 문제 이름](https://www.acmicpc.net/problem/)
+#### [LINK - 문제 이름](https://www.acmicpc.net/problem/)
 
 ### 문제
 <hr>
