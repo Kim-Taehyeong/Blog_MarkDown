@@ -8,6 +8,8 @@
 # <img src="https://d2gd6pc034wcta.cloudfront.net/tier/31.svg" width="30" height="40"> 백준 
 
 
+### 풀이 언어 : C++
+
 문제 구분 : 
 #### [LINK - 백준](https://www.acmicpc.net/problem/)
 
