@@ -51,7 +51,7 @@ export async function getPostData(id) {
                     matterResult.data['slug'] = `posts/${fileName.replace(/\.md$/, '')}`;
                     return matterResult.data
                   })
-                  .sort((post1, post2) => (post1.created > post2.created ? -1 : 1))
+                  .sort((post1, post2) => (parseInt(post1.slug.replace(/[^0-9]/g, "")) < parseInt(post2.slug.replace(/[^0-9]/g, "")) ? -1 : 1))
     return posts
   }
 
