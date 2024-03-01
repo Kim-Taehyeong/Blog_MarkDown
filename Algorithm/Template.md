@@ -4,7 +4,13 @@
 16~20 : 플레티넘  
 21~25 : 다이아  
 26~30 : 루비  
-
+---
+created : 
+title : 
+tag : 
+author : 
+category : 
+---
 # <img src="https://d2gd6pc034wcta.cloudfront.net/tier/31.svg" width="30" height="40"> 백준 
 
 
