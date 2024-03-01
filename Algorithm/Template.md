@@ -8,8 +8,8 @@
 created : 
 title : 
 tag : 
-author : 
-category : 
+author : taehyeok
+category : algorithm
 ---
 # <img src="https://d2gd6pc034wcta.cloudfront.net/tier/31.svg" width="30" height="40"> 백준 
 
