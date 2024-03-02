@@ -26,8 +26,9 @@ for filename in os.listdir(folder):
 						if "문제 구분" in l:
 							idx = i
 							break
-					new_string = f'tag : {lines[idx][lines[idx].find("#"):]}'
-					new_string = new_string.replace('#', '')
+					new_string = f'tag : [{lines[idx][lines[idx].find("#"):]}]'
+					new_string = new_string.replace('#', '', 1)
+					new_string = new_string.replace('#', ',', 1)
 					new_text_content += new_string
 					print(new_string)
 				elif i == 4: # Author
