@@ -2,9 +2,9 @@
 
 export default function Tag({postData} : PostProp) {
     return (
-    postData.tag.map((val) => {
+    postData.tag.map((val, index) => {
         return (
-         <div className="mx-1 inline-block relative py-1 text-md mb-2">
+         <div key={index} className="mx-1 inline-block relative py-1 text-md mb-2">
          <div className="absolute inset-0 text-green-200 flex">
            <svg height="100%" viewBox="0 0 50 100">
              <path
